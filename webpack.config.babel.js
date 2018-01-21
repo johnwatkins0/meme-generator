@@ -44,10 +44,6 @@ const main = () => {
             },
           },
         },
-        {
-          test: /\.(png|svg|jpg|gif)$/,
-          use: { loader: 'file-loader', options: { publicPath: '' } },
-        },
       ],
     },
     devServer: {
