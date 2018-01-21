@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MemeGenerator from '../..';
+import MemeGenerator from '..';
 
 const Example = () => <MemeGenerator />;
 

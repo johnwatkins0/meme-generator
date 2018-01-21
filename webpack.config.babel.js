@@ -6,7 +6,7 @@ import packageJson from './package.json';
 
 const main = () => {
   const entry = {
-    [packageJson.name]: ['./example/src/index.js'],
+    [packageJson.name]: ['./demo/index.js'],
   };
   const filename = `[name].js`;
 
@@ -14,12 +14,12 @@ const main = () => {
     entry,
     output: {
       filename,
-      path: path.resolve(__dirname, 'example'),
+      path: path.resolve(__dirname, 'demo'),
     },
     plugins: [
       new HtmlWebpackPlugin({
-        filename: path.resolve(__dirname, 'example/index.html'),
-        template: 'example/src/index.html',
+        filename: path.resolve(__dirname, 'index.html'),
+        template: 'demo/index.html',
       }),
     ],
     module: {
@@ -52,8 +52,7 @@ const main = () => {
     },
     devServer: {
       open: true,
-      openPage: 'meme-generator/',
-      publicPath: '/meme-generator/',
+      openPage: '',
     },
     devtool: 'source-maps',
   };
