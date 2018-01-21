@@ -2,6 +2,8 @@
 
 A meme-generator. Upload an image, put text on it, download the image.
 
+[Demo.](https://johnwatkins0.github.io/meme-generator/)
+
 ## Install
 
 ```
