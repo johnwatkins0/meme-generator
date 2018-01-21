@@ -1,27 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledLabel = styled.label`
+  display: block;
+`;
+
+const StyledLabelText = styled.span`
+  margin-left: 0.5rem;
+`;
 
 const TextPositionSelect = ({ onSuperimposeChange, superImpose }) => (
   <div>
     <h4>Text Display Options</h4>
-    <label htmlFor="superImpose" style={{ display: 'block' }}>
+    <StyledLabel>
       <input
-        id="superImpose"
         type="radio"
         checked={superImpose}
         onChange={() => onSuperimposeChange(true)}
       />
-      <span style={{ marginLeft: '.5rem' }}>Superimposed on image</span>
-    </label>
-    <label htmlFor="showBelow" style={{ display: 'block' }}>
+      <StyledLabelText>Superimposed on image</StyledLabelText>
+    </StyledLabel>
+    <StyledLabel>
       <input
-        id="showBelow"
         type="radio"
         checked={!superImpose}
         onChange={() => onSuperimposeChange(false)}
       />
-      <span style={{ marginLeft: '.5rem' }}>Below Image</span>
-    </label>
+      <StyledLabelText>Below Image</StyledLabelText>
+    </StyledLabel>
   </div>
 );
 
